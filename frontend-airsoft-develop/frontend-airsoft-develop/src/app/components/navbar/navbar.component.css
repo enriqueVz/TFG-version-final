@@ -1,0 +1,12 @@
+/* Ensure dropdown menus are shown on hover */
+.navbar-nav .dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+/* Ensure the navbar spans the entire width of the screen */
+.navbar {
+    width: 100%;
+}

@@ -1,0 +1,75 @@
+
+<header class="header">
+    <div class="carousel-container" style="margin-top: 20px ;">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let image of images">
+                <img [src]="image.src" [alt]="image.alt" class="d-block w-100 carousel-image">
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</header>
+
+<div class="container mt-5">
+    <section class="text-center">
+        <h2>Welcome to My Website</h2>
+        <p class="lead">Your one-stop destination for all your needs.</p>
+    </section>
+
+    <section class="featured mt-5">
+        <h2 class="text-center">Featured Products</h2>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let product of products">
+                <div class="card mb-4 shadow-sm">
+                    <img class="card-img-top" [src]="product.imageUrl" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">{{ product.description }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+
+                            </div>
+                            <small class="text-muted">9 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about mt-5 text-center">
+        <h2>Sobre Nosotros</h2>
+        <p class="lead">En Airsoft Malaga, nos apasiona llevar la emoción y la adrenalina del airsoft a entusiastas de todos
+        los niveles. Fundada en 2022, nuestra misión es proporcionar equipo de alta calidad, asesoramiento experto y una
+        experiencia centrada en la comunidad para todos, desde principiantes hasta jugadores experimentados.</p>
+    </section>
+    <section class="about mt-5 text-center">
+        <h2>Nuestra Historia</h2>
+        <p class="lead">Airsoft Malaga nació del amor por el juego y el deseo de crear una tienda integral para todo lo
+        relacionado con el airsoft. Nuestros fundadores, [Nombres de los Fundadores], son jugadores ávidos que entienden las
+        necesidades y los desafíos del deporte. Ellos visualizaron un lugar donde los jugadores pudieran encontrar equipos
+        confiables, mantenerse al día con las últimas tendencias y conectarse con una comunidad solidaria.</p>
+    </section>
+    
+
+    <section class="contact mt-5">
+        <h2 class="text-center">Contactanos</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Mensaje</label>
+                <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
+    </section>
+</div>

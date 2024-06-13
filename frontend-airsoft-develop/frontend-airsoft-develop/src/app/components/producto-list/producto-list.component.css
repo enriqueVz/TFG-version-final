@@ -1,0 +1,88 @@
+/* Navbar Hover Dropdown */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* adjust drop down menu from top */
+}
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.mat-grid-tile {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card {
+    width: 100%;
+}
+.product-image {
+    width: 150px;
+    /* Set a fixed width */
+    height: 150px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+.mat-card-image {
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Footer */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.mt-5 {
+    margin-top: 3rem;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.product-card mat-card-header {
+    flex: 0 0 auto;
+}
+
+.product-card mat-card-content {
+    flex: 1 1 auto;
+}
+
+.product-card mat-card-actions {
+    flex: 0 0 auto;
+}
+
+.product-image {
+    height: 200px;
+    object-fit: cover;
+}

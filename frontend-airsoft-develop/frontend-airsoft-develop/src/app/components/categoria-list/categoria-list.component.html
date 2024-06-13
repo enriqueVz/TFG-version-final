@@ -1,0 +1,11 @@
+<div *ngIf="categorias.length > 0; else noCategorias">
+    <h2>All Categories</h2>
+    <mat-list>
+        <mat-list-item *ngFor="let categoria of categorias">
+            <a [routerLink]="['/categoria', categoria.nombre]">{{ categoria.nombre }}</a>
+        </mat-list-item>
+    </mat-list>
+</div>
+<ng-template #noCategorias>
+    <p>No categories found.</p>
+</ng-template>

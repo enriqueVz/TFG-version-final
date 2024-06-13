@@ -1,0 +1,22 @@
+<div class="container">
+    <mat-grid-list cols="3" gutterSize="16px">
+        <mat-grid-tile *ngFor="let fabricante of fabricantes" [colspan]="1" [rowspan]="1">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ fabricante.nombre }}</mat-card-title>
+                    <mat-card-subtitle>Founded: {{ fabricante.fechaFundacion | date:'mediumDate' }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image [src]="fabricante.imagenUrl" alt="{{ fabricante.nombre }}">
+                <mat-card-content>
+                    <p><strong>Country:</strong> {{ fabricante.pais }}</p>
+                    <p><strong>Description:</strong> {{ fabricante.descripcion | truncate:100 }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary" href="fabricante.paginaWeb" target="_blank">
+                        <mat-icon>public</mat-icon> Visit Website
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

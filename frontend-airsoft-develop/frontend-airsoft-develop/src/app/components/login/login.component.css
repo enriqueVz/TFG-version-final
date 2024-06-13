@@ -1,0 +1,71 @@
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.login-container h2 {
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container form div {
+    margin-bottom: 15px;
+}
+
+.login-container form label {
+    margin-bottom: 5px;
+}
+
+.login-container form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container form button[disabled] {
+    background-color: #aaa;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+body {
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.card {
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn-block {
+    width: 100%;
+}

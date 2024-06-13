@@ -1,0 +1,92 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Airsoft Malaga</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/index">Home</a>
+                </li>
+                <li class="nav-item dropdown" [class.show]="isHovering('armas')"
+                    (mouseenter)="toggleHover('armas', true)" (mouseleave)="toggleHover('armas', false)">
+                    <a class="nav-link dropdown-toggle" href="#" id="armasDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Armas
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="armasDropdown" [class.show]="isHovering('armas')">
+                        <li><a class="dropdown-item" routerLink="/subcategoria/fusiles">Fusiles</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/subfusiles">Subfusiles</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/pistolas">Pistolas</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/francotiradores">Francotiradores</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/escopetas">Escopetas</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" [class.show]="isHovering('municion')"
+                    (mouseenter)="toggleHover('municion', true)" (mouseleave)="toggleHover('municion', false)">
+                    <a class="nav-link dropdown-toggle" href="#" id="municionDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Municion y Recarga
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="municionDropdown" [class.show]="isHovering('municion')">
+                        <li><a class="dropdown-item" routerLink="/subcategoria/bolas de airsoft">Bolas</a></li>
+                        <li><a class="dropdown-item"
+                                routerLink="/subcategoria/baterías y cargadores de batería">Baterias y
+                                Cargadores</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/cargadores pistola">Cargadores</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" [class.show]="isHovering('accesorios')"
+                    (mouseenter)="toggleHover('accesorios', true)" (mouseleave)="toggleHover('accesorios', false)">
+                    <a class="nav-link dropdown-toggle" href="#" id="accesoriosDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Accesorios
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accesoriosDropdown"
+                        [class.show]="isHovering('accesorios')">
+                        <li><a class="dropdown-item" routerLink="/subcategoria/gas, co2 y mantenimiento">Gas,Co2 y
+                                Mantenimiento</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/granadas y lanzagranadas">Granadas y
+                                Lanzagranadas</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/miras y red dot">Miras y Red Dot</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/correas y landyards">Correas y
+                                Landyards</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/monturas y raíles">Monturas y Railes</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/linternas y láseres">Linternas y
+                                laseres</a></li>
+                        <li><a class="dropdown-item" routerLink="/subcategoria/Cámaras y gomas Hop-up">Camaras y Gomas
+                                Hop-Up</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown" [class.show]="isHovering('internos')"
+                    (mouseenter)="toggleHover('internos', true)" (mouseleave)="toggleHover('internos', false)">
+                    <a class="nav-link dropdown-toggle" href="#" id="internosDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Internos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="internosDropdown" [class.show]="isHovering('internos')">
+                        <li><a class="dropdown-item" routerLink="/categoria/internos">Internos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/productos">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/fabricantes">Fabricantes</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item" *ngIf="isLoggedIn">
+                    <span class="nav-link">Welcome, {{ username }}!</span>
+                    <a class="nav-link" href="#" (click)="logout()">Logout</a>
+                </li>
+                <li class="nav-item" *ngIf="!isLoggedIn">
+                    <a class="nav-link" routerLink="/login">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,10 @@
+<!-- src/app/components/producto-detail/producto-detail.component.html -->
+<div *ngIf="producto">
+    <h2>{{ producto.nombre }}</h2>
+    <img src="producto.imagenes[0]?.imagenUrl" alt="{{ producto.nombre }}">
+    <p><strong>Description:</strong> {{ producto.descripcion }}</p>
+    <p><strong>Price:</strong> {{ producto.precio | currency }}</p>
+    <p><strong>Category:</strong> {{ producto.subcategoria.categoria.nombre }}</p>
+    <p><strong>Subcategory:</strong> {{ producto.subcategoria.nombre }}</p>
+    <p><strong>Rating:</strong> {{ producto.valoracionMedia }} ({{ producto.numeroValoraciones }} reviews)</p>
+</div>

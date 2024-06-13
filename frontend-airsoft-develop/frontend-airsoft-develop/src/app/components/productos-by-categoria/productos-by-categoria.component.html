@@ -1,0 +1,24 @@
+<div *ngIf="productos.length > 0; else noProducts">
+    <h2>Productos en {{ nombreCategoria }}</h2>
+    <mat-grid-list cols="3" gutterSize="16px">
+        <mat-grid-tile *ngFor="let product of productos" [colspan]="1" [rowspan]="1">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>{{ product.nombre }}</mat-card-title>
+                    <mat-card-subtitle>Manufacturer: {{ product.fabricante.nombre }}</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="product.imagenes[0]?.imagenUrl" alt="{{ product.nombre }}">
+                <mat-card-content>
+                    <p><strong>Description:</strong> {{ product.descripcion }}</p>
+                    <p><strong>Price:</strong> {{ product.precio | currency }}</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button color="primary">Add to Cart</button>
+                </mat-card-actions>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<ng-template #noProducts>
+    <p>No products found for this category.</p>
+</ng-template>

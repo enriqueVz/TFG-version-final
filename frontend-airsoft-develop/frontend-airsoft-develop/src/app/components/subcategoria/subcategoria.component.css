@@ -1,0 +1,81 @@
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* adjust drop down menu from top */
+}
+
+/* Navbar */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Grid */
+.mat-grid-tile {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card {
+    width: 100%;
+}
+
+.product-image {
+    width: 150px;
+    /* Set a fixed width */
+    height: 150px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+
+.mat-card-image {
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+
+.mat-grid-tile {
+    display: flex;
+    justify-content: center;
+}
+
+.mat-card {
+    width: 100%;
+}
+
+.product-image {
+    width: 150px;
+    /* Set a fixed width */
+    height: 150px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
+
+.mat-card-image {
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    object-fit: contain;
+    /* Ensure the image maintains its aspect ratio */
+    margin: 0 auto;
+    /* Center the image horizontally */
+    display: block;
+    /* Ensure the image is treated as a block element */
+}
